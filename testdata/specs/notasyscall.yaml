@@ -1,8 +1,0 @@
-apiVersion: cilium.io/v1alpha1
-kind: TracingPolicy
-metadata:
-  name: "sys-lseek"
-spec:
-  kprobes:
-  - call: "vfs_llseek"
-    syscall: true

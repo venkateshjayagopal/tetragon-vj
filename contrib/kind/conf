@@ -1,4 +1,0 @@
-# Name to use for the kind cluster
-CLUSTER_NAME="tetragon-dev"
-
-#- vi:ft=sh -#
