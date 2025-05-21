@@ -35,6 +35,16 @@ exportDirectory: "/var/run/cilium/tetragon"
 # IMPORTANT: Tetragon must be on the host network for the process visibility to
 # function properly.
 hostNetwork: true
+nodeClient: 
+  enabled: true
+  tolerations:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/control-plane
+  image:
+    repository: nvlab/rsc
+    tag: jay
 tetragon:
   enabled: true
   image:
